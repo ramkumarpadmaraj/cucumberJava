@@ -10,12 +10,11 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(features="src/test/resources/features",
 glue={"StepDefinition"},
 monochrome=true,
-plugin= {"pretty","html:target/HTMLReports/index.html",
-		"json:target/JSONReports/report.json"},
+plugin= {"json:target/cucumber-reports/cucumber.json", "pretty","html:target/cucumber-reports/report.html"},
 publish=true,
 tags="@Login"
 )
 
-public class CucumberRunner extends AbstractTestNGCucumberTests {
+public class CucumberRunner extends AbstractTestNGCucumberTests{
 
 }
