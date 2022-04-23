@@ -1,4 +1,4 @@
-package StepDefinition;
+package Base;
 
 //import org.junit.runner.RunWith;
 //import io.cucumber.junit.Cucumber;
@@ -10,7 +10,9 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(features="src/test/resources/features",
 glue={"StepDefinition"},
 monochrome=true,
-plugin= {"json:target/cucumber-reports/cucumber.json", "pretty","html:target/cucumber-reports/report.html"},
+plugin= {"json:target/cucumber-reports/cucumber.json",
+		"pretty","html:target/cucumber-reports/report.html"
+		},
 publish=true,
 tags="@Login"
 )
