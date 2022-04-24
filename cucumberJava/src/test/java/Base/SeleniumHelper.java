@@ -10,17 +10,18 @@ import org.openqa.selenium.WebDriver;
 
 public class SeleniumHelper {
 
-	public static void takeScreenshot(WebDriver driver) {
+	public static byte[] takeScreenshot(WebDriver driver) {
 		
 		//Base.setUp();
 		
-	 File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	 
+	 return screenshot;
      
      //Copy the file to a location and use try catch block to handle exception
-     try {
-         FileUtils.copyFile(screenshot, new File("./target/screenshot.png"));
-     } catch (IOException e) {
-         System.out.println(e.getMessage());
-     }
+		/*
+		 * try { FileUtils.copyFile(screenshot, new File("./target/screenshot.png")); }
+		 * catch (IOException e) { System.out.println(e.getMessage()); }
+		 */
 	}
 }

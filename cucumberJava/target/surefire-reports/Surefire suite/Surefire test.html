@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Apr 23 15:58:34 CDT 2022</td>
+<td>Started on:</td><td>Sat Apr 23 23:11:56 CDT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16486 ms)</td>
+<tr><td>Total time:</td><td>20 seconds (20758 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,23 +67,49 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='StepDefinition.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: StepDefinition.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User to login to the web application", "Optional[Feature to test Login functionality]"</td>
-<td></td>
-<td>6</td>
-<td>StepDefinition.CucumberRunner@20ccf40b</td></tr>
+<td title='Base.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: Base.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User to login to the web application", "Optional[Feature to test Login functionality]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Compose] but found [compose]
+	at StepDefinition.LoginStepDef.users_is_navigated_to_homepage(LoginStepDef.java:59)
+	at ?.users is navigated to homepage(file:///C:/Users/ramku/git/cucumberJava/cucumberJava/src/test/resources/features/login.feature:8)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1487540468", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1487540468'><pre>java.lang.AssertionError: expected [Compose] but found [compose]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at StepDefinition.LoginStepDef.users_is_navigated_to_homepage(LoginStepDef.java:59)
+	at ?.users is navigated to homepage(file:///C:/Users/ramku/git/cucumberJava/cucumberJava/src/test/resources/features/login.feature:8)
+</pre></div></td>
+<td>9</td>
+<td>Base.CucumberRunner@20ccf40b</td></tr>
 <tr>
-<td title='StepDefinition.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: StepDefinition.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User to login to the web application", "Optional[Feature to test Login functionality]"</td>
-<td></td>
-<td>7</td>
-<td>StepDefinition.CucumberRunner@20ccf40b</td></tr>
+<td title='Base.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: Base.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User to login to the web application", "Optional[Feature to test Login functionality]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Compose] but found [compose]
+	at StepDefinition.LoginStepDef.users_is_navigated_to_homepage(LoginStepDef.java:59)
+	at ?.users is navigated to homepage(file:///C:/Users/ramku/git/cucumberJava/cucumberJava/src/test/resources/features/login.feature:8)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1618230491", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1618230491'><pre>java.lang.AssertionError: expected [Compose] but found [compose]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at StepDefinition.LoginStepDef.users_is_navigated_to_homepage(LoginStepDef.java:59)
+	at ?.users is navigated to homepage(file:///C:/Users/ramku/git/cucumberJava/cucumberJava/src/test/resources/features/login.feature:8)
+</pre></div></td>
+<td>8</td>
+<td>Base.CucumberRunner@20ccf40b</td></tr>
 </table><p>
 </body>
 </html>
