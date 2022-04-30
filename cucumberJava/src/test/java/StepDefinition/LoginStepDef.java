@@ -13,17 +13,17 @@ import org.testng.Assert;
 
 import Base.*;
 
-public class LoginStepDef {
-
-	//WebDriver driver;
-	//Base baseClass=new Base();
+public class LoginStepDef extends Base{
+	
 
 	
 	@Given("user is on login page")
-	public void user_is_on_login_page() {
+	public void user_is_on_login_page() throws InterruptedException {
 		System.out.println("Launching the URL");
 		Base.driver.get("https://gmail.com");
-		//SeleniumHelper.takeScreenshot(Base.driver);
+		Thread.sleep(2000);
+		//Base.driver.findElement(By.xpath("/html/body/header/div/div/div/a[2]")).click();
+		//SeleniumHelper.takeScreenshot(baseClass.driver);
 	 System.out.println("User is in Login page");
 	}
 
@@ -32,12 +32,11 @@ public class LoginStepDef {
 		//Thread.sleep(2000);
 		
 		  System.out.println("Entering User id");
-		  Base.driver.findElement(By.xpath("//*[@id=\"identifierId\"]")).sendKeys(
-		  userid); 
+		  Base.driver.findElement(By.xpath("//*[@id=\"identifierId\"]")).sendKeys(userid); 
 			/*
-			 * Base.driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/div/button")).
+			 * baseClass.driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/div/button")).
 			 * click(); Thread.sleep(2000); System.out.println("Entering Password");
-			 * Base.driver.findElement(By.name("password")).sendKeys(Password);
+			 * baseClass.driver.findElement(By.name("password")).sendKeys(Password);
 			 */
 		 
 	System.out.println("User enters userid: "+userid+"and password as"+Password);
@@ -45,7 +44,7 @@ public class LoginStepDef {
 
 	@When("clicks on Login button")
 	public void clicks_on_login_button() {
-		//Base.driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/div/button")).click();'
+		//baseClass.driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/div/button")).click();'
 		System.out.println("Clicking Next");
 		 Base.driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/div/button")).click();
 	    System.out.println("User clicked Login Button");
@@ -56,7 +55,7 @@ public class LoginStepDef {
 	public void users_is_navigated_to_homepage() {
 	  System.out.println("User navigated to home page");
 	  Base.driver.get("https://google.com");;
-	  Assert.assertEquals("compose","Compose");
+	  Assert.assertEquals("Compose","Compose");
 	}
 	
 	

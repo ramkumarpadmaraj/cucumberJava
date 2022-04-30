@@ -15,12 +15,12 @@ import Base.*;
 
 public class Hooks {
 
-	WebDriver driver;
+		
 	
 	@Before
 	public void setup() {
 		
-		driver=Base.setUp();
+		Base.setUp();
 		
 		//System.out.println(driver.toString());
 		
