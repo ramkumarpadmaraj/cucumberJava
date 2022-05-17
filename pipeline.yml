@@ -1,7 +1,9 @@
 pipeline:
   agent: any
-  steps:
-    - bat mvn clean
+  stages:
+    stage:
+      steps:
+        - bat mvn clean
     
   
  
