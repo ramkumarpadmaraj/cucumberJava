@@ -9,10 +9,10 @@ pipeline:
      steps:
       - echo "Testing"
       - bat "mvn test"
-    - stage: deploy
-      steps:
-       - echo "Deploy Project"
-       - bat "maven compile"
+   - stage: deploy
+     steps:
+      - echo "Deploy Project"
+      - bat "maven compile"
          
           
       
