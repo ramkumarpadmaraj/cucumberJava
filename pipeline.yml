@@ -5,7 +5,7 @@ pipeline:
     stage: Build
       steps:
         - echo Building project
-        - bat "maven clean"
+        - bat maven clean
     stage: "Test"
        steps:
          -echo "Test Project"
