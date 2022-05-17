@@ -1,0 +1,19 @@
+pipeline:
+  agent:
+    any:
+  stages:
+    -stage: "Build"
+     steps:
+        -echo "Building project"
+        -bat "maven clean"
+     -stage: "Test"
+      steps:
+         -echo "Test Project"
+         -bat "maven test"
+      -stage: "deploy"
+       steps:
+          -echo "Deploy Project"
+          -bat "maven compile"
+          
+        
+  
